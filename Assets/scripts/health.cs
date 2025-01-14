@@ -15,15 +15,22 @@ public class health : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        Debug.Log("My <b>current<b> <color = green>HEALTH</color> <b>is<b> " + currentHealth);
 
         if (currentHealth <= 0)
         {
             Die();
         }
+
+        if (currentHealth <= 1)
+        {
+            Debug.Log("I'm bouta lock in fr fr");
+        }
     }
 
     void Die()
     {
+        Debug.Log("So rude OMG >:/");
         Destroy(gameObject);
     }
 }
