@@ -45,6 +45,7 @@ public class UIManager : MonoBehaviour
         pos.y = Random.Range(-200, 200);
         quitTransform.DOAnchorPosX(pos.x, tweenDuration).SetUpdate(true);
         quitTransform.DOAnchorPosY(pos.y, tweenDuration).SetUpdate(true);
+        quitTransform.DOShakeRotation(5, Vector2.right * 50).SetUpdate(true);
         //Application.Quit();
         //UnityEditor.EditorApplication.isPlaying = false;
     }
