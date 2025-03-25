@@ -13,17 +13,18 @@ public class PlayerHealth : MonoBehaviour
     {
         Time.timeScale = 1f;
         currentHealth = maxHealth;
-        HUD.UpdateHealthBar(currentHealth / maxHealth);
+        HUD.UpdateHealthBar(currentHealth);
     }
 
     public void TakeDamage(float damageAmount)
     {
         currentHealth -= damageAmount;
-        HUD.UpdateHealthBar(currentHealth/maxHealth);
+        HUD.UpdateHealthBar(currentHealth);
     }
 
     void Update()
     {
+        HUD.UpdateHealthBar(currentHealth);
         if (currentHealth <= 0)
         Die();
     }

@@ -11,7 +11,7 @@ public class bullet : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            collision.GetComponent<health>()?.TakeDamage(damage);
+            collision.GetComponent<health>().TakeDamage(damage);
         }
 
         Destroy(gameObject);
