@@ -6,6 +6,7 @@ public class health : MonoBehaviour
 {
     public int maxHealth;
     int currentHealth;
+    public GameObject player;
 
     private void Start()
     {
@@ -31,6 +32,7 @@ public class health : MonoBehaviour
     void Die()
     {
         Debug.Log("So rude OMG >:/");
+        player.GetComponent<spawnEnemy>().slimesKilled += 1;
         Destroy(gameObject);
     }
 }
